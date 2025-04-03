@@ -97,7 +97,7 @@ gtnsecond(){
 rafflebakup(){
   local bakUpFolderLoc='/viva/cloud/Google/cltcatcom/2018_StMarysRaffle-Bak';
   #testing
-  #local bakUpFolderLoc='~/backups';
+  #local bakUpFolderLoc='$HOME/backups';
   local newBakUpFolderName=$(gtyear)$(gtnmonth)$(gtdate)$(gthour)$(gtminute)$(gtnsecond);
   #echo bakUpFolderLoc->  "$bakUpFolderLoc";
   cd "$bakUpFolderLoc";

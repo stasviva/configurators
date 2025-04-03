@@ -2,17 +2,17 @@
 # <!>--------------------------------------------------BASHRC----------------------------------------------------------<!> #
 # <!>------------------------------------------------------------------------------------------------------------------<!> #
 # echo "#--<!>--------------------------------------------------------------------------------------------x-<!>"
-# echo "# <!> TO MODIFY BASHRC -> sudo vi ~/.bashrc OR sudo open -a atom ~/.bashrc"
-# echo "# <!> TO RELOAD/REFRESH BASHRC -> source ~/.bashrc or . ~/.bashrc"
+# echo "# <!> TO MODIFY BASHRC -> sudo vi $HOME/.bashrc OR sudo open -a atom $HOME/.bashrc"
+# echo "# <!> TO RELOAD/REFRESH BASHRC -> source $HOME/.bashrc or . $HOME/.bashrc"
 # echo "#--<!>--------------------------------------------------------------------------------------------x-<!>"
 #bash_aliases could your changes separate and organized.
 #It is only used if it exists
-if [ -f ~/.bash_aliases ]; then
-. ~/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+. $HOME/.bash_aliases
 fi
 # <!>-bash_functions where you could organize your supporting functions for your aliases.
- if [ -f ~/.bash_functions ]; then
- . ~/.bash_functions
+ if [ -f $HOME/.bash_functions ]; then
+ . $HOME/.bash_functions
  fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -98,7 +98,7 @@ proml
 # https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init bash)"
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash
 
 #### if [ -f "/opt/homebrew/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 ####     __GIT_PROMPT_DIR="/opt/homebrew/opt/bash-git-prompt/share"

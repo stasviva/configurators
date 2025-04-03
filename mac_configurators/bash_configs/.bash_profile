@@ -292,8 +292,8 @@ fi
 
 # -<!>-bash-completion--BEGIN--
 # bash - completion
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -f $HOME/.git-completion.bash ]; then
+  . $HOME/.git-completion.bash
 fi
 [ -f ${BREW_PREFIX}/etc/bash_completion ] && . ${BREW_PREFIX}/etc/bash_completion
 
@@ -331,7 +331,7 @@ PS1="$TITLEBAR\n\[${COLOR_GREEN}\]<!> \d \t \[${COLOR_GREEN}\]<!> \[${COLOR_LIGH
 # -<!>-Colorify & Have Git Branch In Prompt-BASH-<!>---END---
 
 ##
-# Your previous ~/.bash_profile file was backed up as ~/.bash_profile.macports-saved_2018-09-24_at_17:09:22
+# Your previous $HOME/.bash_profile file was backed up as $HOME/.bash_profile.macports-saved_2018-09-24_at_17:09:22
 ##
 
 # MacPorts Installer addition on 2018-09-24_at_17:09:22: adding an appropriate PATH variable for use with MacPorts.
@@ -339,7 +339,7 @@ PS1="$TITLEBAR\n\[${COLOR_GREEN}\]<!> \d \t \[${COLOR_GREEN}\]<!> \[${COLOR_LIGH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 # <!> TEST AND EXECUTE THE bashrc every time user's bash_profile is executed or terminal is opened.
-. ~/.bashrc
+. $HOME/.bashrc
 # <!>Clearing to have more space on console, scroll up to see the values
 # <!> Uncomment to enable if space becomes a concern
 # clear
@@ -363,17 +363,17 @@ function pause() {
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 nvm use --lts #v11.10.1
 # nvm use 12.11
-#Commented by ViVa on 20210205 as the aliases/shortcuts has been moved to ~/.bash_aliases-----<BEGIN>----------
+#Commented by ViVa on 20210205 as the aliases/shortcuts has been moved to $HOME/.bash_aliases-----<BEGIN>----------
 #echo "#--<!>--------------------------------------------------------------------------------------------e-<!>"
-#echo "# <!> BASH > [~/.bash_profile] OR [~/.bash_aliases] OR [~/.bashrc]"
+#echo "# <!> BASH > [$HOME/.bash_profile] OR [$HOME/.bash_aliases] OR [$HOME/.bashrc]"
 #echo "# <!> MODIFY > {sudo vi[b] / open -a atom [b]} <!> RELOAD > {source [b] / . [b]}"
 #echo "# <!> Illustrations -------------------e----------------------"
-#echo "# <!> Edit bash* : sudo open -a atom ~/.bash_profile"
-#echo "# <!> Reload bash* : . ~/.bash_profile"
-#echo "# <!> To Change Aliases : sudo open -a atom ~/.bash_aliases"
+#echo "# <!> Edit bash* : sudo open -a atom $HOME/.bash_profile"
+#echo "# <!> Reload bash* : . $HOME/.bash_profile"
+#echo "# <!> To Change Aliases : sudo open -a atom $HOME/.bash_aliases"
 #echo "# <!> Illustrations -------------------x----------------------"
 #echo "#--<!>--------------------------------------------------------------------------------------------x-<!>"
-#Commented by ViVa on 20210205 as the aliases/shortcuts has been moved to ~/.bash_aliases-----<-END->----------
+#Commented by ViVa on 20210205 as the aliases/shortcuts has been moved to $HOME/.bash_aliases-----<-END->----------
 if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "ybpv" || "$FLAG_STATUS" == "ybpp" ]]; then
   echo "# <!>--------------------------------------------< BASH_PROFILE [USING VERSIONS]>------------------------------------------------x--------<!> #" && pause 'Press [return] key to begin...' && clear
 fi

@@ -9,8 +9,8 @@ if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "yes" ]]; then
   # <!>--------------------------------------------BASH_ALIASES----------------------------------------------------------<!> #
   # <!>------------------------------------------------------------------------------------------------------------------<!> #
   # echo "#--<!>--------------------------------------------------------------------------------------------x-<!>"
-  # echo "# <!> TO MODIFY BASH ALIASES -> sudo vi ~/.bash_aliases OR sudo open -a vsc ~/.bash_aliases"
-  # echo "# <!> TO RELOAD/REFRESH BASH ALIASES -> source ~/.bash_aliases or . ~/.bash_aliases"
+  # echo "# <!> TO MODIFY BASH ALIASES -> sudo vi $HOME/.bash_aliases OR sudo open -a vsc $HOME/.bash_aliases"
+  # echo "# <!> TO RELOAD/REFRESH BASH ALIASES -> source $HOME/.bash_aliases or . $HOME/.bash_aliases"
   echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------e--------<!> #"
   echo "# <!> Edit profile/aliases/rc/functions -> editbp,editba,editbrc,editbfn,edithosts,editstarship"
   # echo "# <!> [start][stop][bounce] -> (awstransform), (tomcat), (nginx), (mongo)"
@@ -45,9 +45,9 @@ if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "yes" ]]; then
   echo "# <!> [INFO] -> gdate would be used for date from coreutils"
   echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------x--------<!> #"
 fi
-ONE_DRIVE_HOME="~/Library/CloudStorage/OneDrive-Personal"
-GITHUB="~/VDrive/vd_dev/e_src/GitHub_Ref"
-V_DRIVE="~/VDrive"
+ONE_DRIVE_HOME="$HOME/Library/CloudStorage/OneDrive-Personal"
+GITHUB="$HOME/VDrive/vd_dev/e_src/GitHub_Ref"
+V_DRIVE="$HOME/VDrive"
 LRN_HOME="${V_DRIVE}/vd_learn"
 SCRIPTS_HOME="${V_DRIVE}/vd_scripts/97_scripts"
 PY_SCRIPTS_HOME="${V_DRIVE}/vd_scripts/97_py_scripts"
@@ -58,8 +58,8 @@ alias gtpy="cd ${PY_SCRIPTS_HOME}"
 
 alias myqueue="open https://qvcprod.service-now.com/itsp?id=itsp_index"
 
-alias v2025="cd ~/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025 && open ."
-alias v2025holidays="open ~/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025/9000_2025_Holidays/2025-holiday-schedule.pdf"
+alias v2025="cd $HOME/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025 && open ."
+alias v2025holidays="open $HOME/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025/9000_2025_Holidays/2025-holiday-schedule.pdf"
 alias github="cd $GITHUB"
 
 vsc_app="/Applications/Visual Studio Code.app"
@@ -162,9 +162,9 @@ alias date='gdate'
 
 alias vsc="open -a Visual\ Studio\ Code.app"
 
-alias localfontdir="open ~/.local/share/fonts/"
-alias usrconfigs="open ~/.config/"
-alias editjrnl="atom -a ~/.config/jrnl/jrnl.yaml"
+alias localfontdir="open $HOME/.local/share/fonts/"
+alias usrconfigs="open $HOME/.config/"
+alias editjrnl="atom -a $HOME/.config/jrnl/jrnl.yaml"
 
 alias filenamer='. $SCRIPTS_HOME/filenamer.sh'
 alias 64codec='. $SCRIPTS_HOME/base64_encode_decode.sh'
@@ -177,10 +177,10 @@ alias sepas='. $SCRIPTS_HOME/separator_symbol.sh'
 
 alias daij='. $SCRIPTS_HOME/daij_jrnl.sh'
 
-alias opendailytodo="open -a '/Applications/Microsoft Word.app/Contents/MacOS/Microsoft Word' '~/Documents/DailyToDoTemplate_202109214143723.dotx'"
-# alias typingmaster='. ~/Library/PlayOnMac/shortcuts/tmaster'
+alias opendailytodo="open -a '/Applications/Microsoft Word.app/Contents/MacOS/Microsoft Word' '$HOME/Documents/DailyToDoTemplate_202109214143723.dotx'"
+# alias typingmaster='. $HOME/Library/PlayOnMac/shortcuts/tmaster'
 # alias typingmaster='. $SCRIPTS_HOME/typingmaster.sh'
-alias typingmaster="open -a '/Applications/PlayOnMac.app/Contents/MacOS/playonmac' '~/Library/PlayOnMac/wineprefix/TypingMaster_/drive_c/tmaster.exe'"
+alias typingmaster="open -a '/Applications/PlayOnMac.app/Contents/MacOS/playonmac' '$HOME/Library/PlayOnMac/wineprefix/TypingMaster_/drive_c/tmaster.exe'"
 
 alias meld='/Applications/Meld.app/Contents/MacOS/Meld'
 alias diffmerge='/Applications/DiffMerge.app/Contents/MacOS/DiffMerge'
@@ -209,54 +209,54 @@ alias bsvc='. ${SCRIPTS_HOME}/brew_svs_start_stop_bounce.sh'
 # Copy the PWD to the Clipboard
 alias cpwd="pwd | tr -d '\n' | pbcopy && echo '<!>---[[INFO]]---pwd copied to CLIPBOARD !!!'"
 alias scriptshm='cd ${SCRIPTS_HOME}'
-alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
+alias jenv_set_java_home='export JAVA_HOME="$HOME//.jenv/versions/`jenv version-name`"'
 #
 alias setnvm='nvm use 14.17.6'
 
-### alias editbp='sudo open subl ~/.bash_profile'
-### # alias editbp='sudo open -a Sublime\ Text.app ~/.bash_profile'
-### alias editba='sudo open -a Sublime\ Text.app ~/.bash_aliases'
-### alias editbrc='sudo open -a Sublime\ Text.app ~/.bashrc'
-### alias editbfn='sudo open -a Sublime\ Text.app ~/.bash_functions'
+### alias editbp='sudo open subl $HOME/.bash_profile'
+### # alias editbp='sudo open -a Sublime\ Text.app $HOME/.bash_profile'
+### alias editba='sudo open -a Sublime\ Text.app $HOME/.bash_aliases'
+### alias editbrc='sudo open -a Sublime\ Text.app $HOME/.bashrc'
+### alias editbfn='sudo open -a Sublime\ Text.app $HOME/.bash_functions'
 ### alias edithosts='sudo Sublime\ Text.app -a /private/etc/hosts'
-### alias editstarship='open -a Sublime\ Text.app ~/.config/starship.toml'
+### alias editstarship='open -a Sublime\ Text.app $HOME/.config/starship.toml'
 
 ####### Using sh_editor alias to configure the editor at a single point for better maintainability
-alias editbp="$SU_SHELL_EDITOR ~/.bash_profile"
-alias editba="$SU_SHELL_EDITOR ~/.bash_aliases"
-alias editbrc="$SU_SHELL_EDITOR ~/.bashrc"
-alias editbfn="$SU_SHELL_EDITOR ~/.bash_functions"
+alias editbp="$SU_SHELL_EDITOR $HOME/.bash_profile"
+alias editba="$SU_SHELL_EDITOR $HOME/.bash_aliases"
+alias editbrc="$SU_SHELL_EDITOR $HOME/.bashrc"
+alias editbfn="$SU_SHELL_EDITOR $HOME/.bash_functions"
 alias edithosts="$SU_SHELL_EDITOR /private/etc/hosts"
-alias editstarship="$SHELL_EDITOR ~/.config/starship.toml"
+alias editstarship="$SHELL_EDITOR $HOME/.config/starship.toml"
 
 #Folder Shortcuts
-alias tmp='open ~/tmp'
+alias tmp='open $HOME/tmp'
 alias details='open ${V_DRIVE}/vd_details'
-alias mystudydetails='open ~/Cloud/OneDrive/mystudyv/mystudyv_details'
-alias manuals='open ~/Cloud/OneDrive/Manuals'
-alias vscwa='open ~/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace'
-alias mystudy='open ~/Cloud/OneDrive/MyStudy'
+alias mystudydetails='open $HOME/Cloud/OneDrive/mystudyv/mystudyv_details'
+alias manuals='open $HOME/Cloud/OneDrive/Manuals'
+alias vscwa='open $HOME/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace'
+alias mystudy='open $HOME/Cloud/OneDrive/MyStudy'
 #Cloud Folders
-alias cloud='open ~/Cloud/OneDrive/cloud'
-alias onedrive='open ~/Cloud/OneDrive'
-alias dropbox='open ~/Cloud/OneDrive/cloud/Dropbox'
-alias gdrivebelk='open ~/Google\ Drive\ \(vijish_varghese@belk.com\)/'
+alias cloud='open $HOME/Cloud/OneDrive/cloud'
+alias onedrive='open $HOME/Cloud/OneDrive'
+alias dropbox='open $HOME/Cloud/OneDrive/cloud/Dropbox'
+alias gdrivebelk='open $HOME/Google\ Drive\ \(vijish_varghese@belk.com\)/'
 #Quick Ref Folders
-alias newhorizons='open ~/Cloud/OneDrive/Career/05_Belk/2020_NewHorizons'
-alias apprebuild='open ~/Cloud/OneDrive/Career/05_Belk/Mobile/Mobile\ App\ Rebuild'
-alias dev='open ~/dev'
-alias wa='open ~/dev/wa'
-alias src='open ~/src'
+alias newhorizons='open $HOME/Cloud/OneDrive/Career/05_Belk/2020_NewHorizons'
+alias apprebuild='open $HOME/Cloud/OneDrive/Career/05_Belk/Mobile/Mobile\ App\ Rebuild'
+alias dev='open $HOME/dev'
+alias wa='open $HOME/dev/wa'
+alias src='open $HOME/src'
 #WorkArea/WorkSpace Shortcuts
-alias belksfccwa='code -a ~/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/belk_sfcc.code-workspace'
-alias detailswa='code -a ~/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/details_persona.code-workspace'
-alias mystudydetailswa='code -a ~/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/mystudyv_details.code-workspace'
+alias belksfccwa='code -a $HOME/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/belk_sfcc.code-workspace'
+alias detailswa='code -a $HOME/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/details_persona.code-workspace'
+alias mystudydetailswa='code -a $HOME/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/mystudyv_details.code-workspace'
 #Personal Quick Folders
-alias family='open ~/Cloud/OneDrive/Family'
-alias cota='open ~/Cloud/OneDrive/Family/04_MatthewJosephMaroky/COTA'
-alias neatscan='open ~/Cloud/OneDrive/Neat_Scan'
-alias tax='open ~/Cloud/OneDrive/Tax'
-alias immigration='open ~/Cloud/OneDrive/Immigration'
+alias family='open $HOME/Cloud/OneDrive/Family'
+alias cota='open $HOME/Cloud/OneDrive/Family/04_MatthewJosephMaroky/COTA'
+alias neatscan='open $HOME/Cloud/OneDrive/Neat_Scan'
+alias tax='open $HOME/Cloud/OneDrive/Tax'
+alias immigration='open $HOME/Cloud/OneDrive/Immigration'
 
 alias typingmaster='open /Applications/PlayOnMac.app'
 
@@ -269,7 +269,7 @@ alias gbjira='. $SCRIPTS_HOME/gjira.sh'
 alias gbpush='. $SCRIPTS_HOME/gpush.sh'
 alias gbconfig='sh $SCRIPTS_HOME/gconfig.sh'
 alias gssh='eval $(ssh-agent)'
-alias gsshadd='ssh-add --apple-use-keychain ~/.ssh/id_rsa'
+alias gsshadd='ssh-add --apple-use-keychain $HOME/.ssh/id_rsa'
 
 
 # alias dtodo='. $SCRIPTS_HOME/dtodo.sh'
@@ -281,8 +281,8 @@ alias gotoscripts='cd $SCRIPTS_HOME'
 # <!>-AWS DEV OPS TRANSFORM SERVER START STOP REBOOT ---END---
 
 # <!>-LOCAL TOMCAT SERVER START STOP --BEGIN--
-alias starttomcat='sudo sh ~/Library/tomcat/bin/startup.sh'
-alias stoptomcat='sudo sh ~/Library/tomcat/bin/shutdown.sh'
+alias starttomcat='sudo sh $HOME/Library/tomcat/bin/startup.sh'
+alias stoptomcat='sudo sh $HOME/Library/tomcat/bin/shutdown.sh'
 # <!>-LOCAL TOMCAT SERVER START STOP ---END---
 
 # <!>-LOCAL NGINX SERVER START STOP --BEGIN--
@@ -291,8 +291,8 @@ alias stopnginx='sudo nginx -s stop'
 # <!>-LOCAL NGINX SERVER START STOP ---END---
 
 # <!>-LOCAL MONGO SERVER START STOP --BEGIN--
-# <!>-Local Mongo DB Location : ~/data/mongo_db
-alias startmongo='mongod --dbpath ~/data/mongo_db'
+# <!>-Local Mongo DB Location : $HOME/data/mongo_db
+alias startmongo='mongod --dbpath $HOME/data/mongo_db'
 # <!>-LOCAL MONGO SERVER START STOP --BEGIN--
 
 # <!>-LOCAL USEFUL ALIASES --BEGIN--
@@ -308,10 +308,10 @@ alias rhm='cd /'
 alias randpass="openssl rand -base64 20"
 
 # <!>-4-Quickly reload .bash_profile to enable changes.
-alias reloadbp='. ~/.bash_profile'
-alias reloadba='. ~/.bash_aliases'
-alias reloadbrc='. ~/.bashrc'
-alias realoadfn='source ~/.bash_functions'
+alias reloadbp='. $HOME/.bash_profile'
+alias reloadba='. $HOME/.bash_aliases'
+alias reloadbrc='. $HOME/.bashrc'
+alias realoadfn='source $HOME/.bash_functions'
 
 alias ttag='echo -e "* [ ] "  && echo -e "* [ ] " | pbcopy'
 
@@ -361,7 +361,7 @@ alias ippub="dig +short myip.opendns.com @resolver1.opendns.com"
 # alias psg='ps -ef | grep '
 # <!>-LOCAL USEFUL ALIASES ---END---
 
-source ~/.nvm/nvm.sh
+source $HOME/.nvm/nvm.sh
 #Commented by ViVa on 20210205 as this code in here would create additional 'Press [return] key to begin...' -----<BEGIN>----------
 #
 #function pause(){
