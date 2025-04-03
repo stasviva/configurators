@@ -46,6 +46,8 @@ if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "yes" ]]; then
   echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------x--------<!> #"
 fi
 ONE_DRIVE_HOME="$HOME/Library/CloudStorage/OneDrive-Personal"
+# icloud drive folder quick access
+ICLOUD_DRIVE_HOME="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/"
 GITHUB="$HOME/VDrive/vd_dev/e_src/GitHub_Ref"
 V_DRIVE="$HOME/VDrive"
 LRN_HOME="${V_DRIVE}/vd_learn"
@@ -61,6 +63,7 @@ alias myqueue="open https://qvcprod.service-now.com/itsp?id=itsp_index"
 alias v2025="cd $HOME/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025 && open ."
 alias v2025holidays="open $HOME/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025/9000_2025_Holidays/2025-holiday-schedule.pdf"
 alias github="cd $GITHUB"
+alias icdrive="cd $ICLOUD_DRIVE_HOME
 
 vsc_app="/Applications/Visual Studio Code.app"
 ATOM_APP="/Applications/Atom.app"
