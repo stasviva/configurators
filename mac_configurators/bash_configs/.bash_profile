@@ -1,14 +1,14 @@
-# $FLAG_STATUS
-# ybp - yes bash profile
-# yba - yes bash alias
-# ----------Uncomment the below line to enable the logs-------------
+### $FLAG_STATUS
+### ybp - yes bash profile
+### yba - yes bash alias
+### ----------Uncomment the below line to enable the logs-------------
 # read -p "Display the environment details? (ybp, ybpv, ybpp, yba): " input_param
-# FLAG_STATUS=${input_param}
-# Upper Case for bash + 4.0
-# FLAG_STATUS=${input_param^^}
-# Upper Case for bash - 4.0
+### FLAG_STATUS=${input_param}
+### Upper Case for bash + 4.0
+### FLAG_STATUS=${input_param^^}
+### Upper Case for bash - 4.0
 FLAG_STATUS=""
-# ----------Uncomment the below line to enable the logs-------------
+### ----------Uncomment the below line to enable the logs-------------
 # FLAG_STATUS=$(echo "$input_param" | tr 'a-z' 'A-Z')
 
 echo "# <!>--------------------------------------------< BASH_PROFILE >------------------------------------------------e--------<!> #"
