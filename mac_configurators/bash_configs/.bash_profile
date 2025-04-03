@@ -1,29 +1,9 @@
-# $FLAG_STATUS
-# ybp - yes bash profile
-# yba - yes bash alias
-# ----------Uncomment the below line to enable the logs-------------
-# read -p "Display the environment details? (ybp, ybpv, ybpp, yba): " input_param
-# FLAG_STATUS=${input_param}
-# Upper Case for bash + 4.0
-# FLAG_STATUS=${input_param^^}
-# Upper Case for bash - 4.0
-FLAG_STATUS=""
-# ----------Uncomment the below line to enable the logs-------------
-# FLAG_STATUS=$(echo "$input_param" | tr 'a-z' 'A-Z')
-
 echo "# <!>--------------------------------------------< BASH_PROFILE >------------------------------------------------e--------<!> #"
 # <!>------------------------------------------------------------------------------------------------------------------<!> #
 # <!>--------------------------------------------BASH_PROFILE----------------------------------------------------------<!> #
 # <!>------------------------------------------------------------------------------------------------------------------<!> #
-if [ "$FLAG_STATUS" == "y" ]; then
-  echo "Is Log Enabled $FLAG_STATUS"
-  echo "#----Current Shell ----> $0"
-fi
-
-# M - Mac
-# eval "$(/opt/homebrew/bin/brew shellenv)"
-# Intel Mac
-eval "$(/usr/local/bin/brew shellenv)"
+echo "#----Current Shell ----> $0"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 # <!>-BREW PREFIX
 export BREW_PREFIX=$(brew --prefix)
 export BREW_CELLAR=$BREW_PREFIX/Cellar
@@ -41,7 +21,7 @@ export M2_HOME=${BREW_CELLAR}/maven/3.8.6
 export CATALINA_HOME=${BREW_CELLAR}/tomcat/10.0.23
 # export NODE_HOME=/Users/mavavi/dev/servers/node-v4.2.6-darwin-x64
 # <!>-Version-NA
-export DROID_HOME=~/Library/Android/sdk
+export DROID_HOME=/Users/vijish.varghese/Library/Android/sdk
 # <!>-Version-NA
 export DROID_TOOLS=${DROID_HOME}/platform-tools
 # Android NDK
@@ -89,11 +69,11 @@ export JMETER_HOME=${BREW_CELLAR}/jmeter/5.5
 # export RUBY_HOME=${HOME}/.rvm/gems/ruby-3.0.0
 # PowerShell Home
 export PSHOME=/usr/local/bin/pwsh
-## <!>-SFCC-CI Parameters
-# export SFCC_CI_API_KEY='543e30ca-7df6-462b-a7a2-d611bbb2f39b'
-# export SFCC_CI_API_SECRET='Lpj$e5#zL?f&p3M&'
-# export SFCC_CI_API_USER='vijish_varghese@belk.com'
-# export SFCC_CI_API_USER_PW='$&YRmf6E7zqEB'
+# <!>-SFCC-CI Parameters
+export SFCC_CI_API_KEY='543e30ca-7df6-462b-a7a2-d611bbb2f39b'
+export SFCC_CI_API_SECRET='Lpj$e5#zL?f&p3M&'
+export SFCC_CI_API_USER='vijish_varghese@belk.com'
+export SFCC_CI_API_USER_PW='$&YRmf6E7zqEB'
 
 # Git branch in prompt.- <!> Deprecated with vcprompt on 20181115
 parse_git_branch() {
@@ -139,19 +119,16 @@ export COLOR_LIGHT_GRAY='\e[0;37m'
 # <!>-Variables--<BEGIN>-
 
 # <!>-Is Logging Enabled
-IS_LOG_ENABLED="ybp"
-# IS_LOG_ENABLED="Y"
+IS_LOG_ENABLED="Y"
 # IS_LOG_ENABLED="N"
 
 # <!>-Is Version Logging Enabled
-IS_VERSION_LOG_ENABLED="ybpv"
 # IS_VERSION_LOG_ENABLED="Y"
-# IS_VERSION_LOG_ENABLED="N"
+IS_VERSION_LOG_ENABLED="N"
 
 # <!>-Is Path Logging Enabled
-IS_PATH_LOG_ENABLED="ybpp"
 # IS_PATH_LOG_ENABLED="Y"
-# IS_PATH_LOG_ENABLED="N"
+IS_PATH_LOG_ENABLED="N"
 
 # <!>-Variables--<END>-
 
@@ -196,25 +173,25 @@ echo "#                                 IS_PATH_LOG_ENABLED----<!>" $IS_PATH_LOG
 echo "#--<!>---------------------------------------------------------------------------------x-LOGGER-R-x-<!>"
 
 # <!> GLOBAL LOGGING ENABLED STATUS CHECK
-if [ "$IS_LOG_ENABLED" == "$FLAG_STATUS" ]; then
+if [ "$IS_LOG_ENABLED" == "Y" ]; then
   # echo "#---<!>--BREW_PREFIX--<BREW_PREFIX>-x-------------------------------------------------------x"
   echo "#   <!>-----BREW_PREFIX----------<!>" $BREW_PREFIX
   # echo "#---<!>--Inspect--<BEGIN>---#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#"
-  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
     echo "#---<!>--ANT_HOME--<ANT_HOME>-x-------------------------------------------------------------x"
     echo $ANT_HOME \[VERSION \-\>\] && ant -v
   else
     echo "#   <!>-----ANT_HOME-------------<!>" $ANT_HOME
   fi
 
-  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
     echo "#---<!>--JAVA_HOME--<JAVA_HOME>-x-----------------------------------------------------------x"
     echo JAVA_HOME------ $JAVA_HOME \[VERSION \-\>\] && java -version
   else
     echo "#   <!>-----JAVA_HOME------------<!>" $JAVA_HOME
   fi
 
-  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
     echo "#---<!>--MAVEN_HOME--<MAVEN_HOME>-x---------------------------------------------------------x"
     echo M2_HOME-------- $M2_HOME \[VERSION \-\>\] && mvn -v
   else
@@ -227,7 +204,7 @@ if [ "$IS_LOG_ENABLED" == "$FLAG_STATUS" ]; then
   # echo "#---<!>--DROID_TOOLS--<DROID_TOOLS>-x-------------------------------------------------------x"
   echo "#   <!>-----DROID_PLATFORM_TOOLS-<!>" $DROID_TOOLS
 
-  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
     echo "#---<!>--MONGO_HOME--<MONGO_HOME>-x---------------------------------------------------------x"
     echo MONGO_HOME-------- $MONGO_HOME \[VERSION \-\>\] && mongo -version
   else
@@ -255,19 +232,19 @@ if [ "$IS_LOG_ENABLED" == "$FLAG_STATUS" ]; then
   echo "#   <!>-----JMETER_HOME----------<!>" $JMETER_HOME
   # echo "#---<!>--JENKINS_HOME--<JENKINS_HOME>-x---------------------------------------------------------x"
   echo "#   <!>-----JENKINS_HOME----------<!>" $JENKINS_HM
-  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
     # echo "#---<!>--GRAILS_HOME--<GRAILS_HOME>-x---------------------------------------------------------x"
     echo "#   <!>-----GRAILS_HOME----------<!>" $GRAILS_HM \[VERSION \-\>\] && grails -version
   else
     echo "#   <!>-----GRAILS_HOME-------------<!>" $GRAILS_HM
   fi
-  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
     # echo "#---<!>--GO_HOME--<GO_HOME>-x---------------------------------------------------------x"
     echo "#   <!>-----GO_HOME----------<!>" $GO_HM \[VERSION \-\>\] && go version
   else
     echo "#   <!>-----GO_HOME-------------<!>" $GO_HM
   fi
-  if [ "$IS_PATH_LOG_ENABLED" == "$FLAG_STATUS" ]; then
+  if [ "$IS_PATH_LOG_ENABLED" == "Y" ]; then
     echo "#--<!>---------------------------------------------------------------------------------x--PATH--E-x-<!>"
     echo $PATH
     echo "#--<!>---------------------------------------------------------------------------------x--PATH--R-x-<!>"
@@ -360,9 +337,7 @@ nvm use --lts #v11.10.1
 #echo "# <!> Illustrations -------------------x----------------------"
 #echo "#--<!>--------------------------------------------------------------------------------------------x-<!>"
 #Commented by ViVa on 20210205 as the aliases/shortcuts has been moved to ~/.bash_aliases-----<-END->----------
-if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "ybpv" || "$FLAG_STATUS" == "ybpp" ]]; then
-  echo "# <!>--------------------------------------------< BASH_PROFILE [USING VERSIONS]>------------------------------------------------x--------<!> #" && pause 'Press [return] key to begin...' && clear
-fi
+echo "# <!>--------------------------------------------< BASH_PROFILE [USING VERSIONS]>------------------------------------------------x--------<!> #" && pause 'Press [return] key to begin...' && clear
 
 echo "# <!>--------------------------------------------< USING BASH PROFILE >------------------------------------------------x--------<!> #"
 . "$HOME/.cargo/env"
@@ -372,9 +347,9 @@ export PATH="$PATH:$HOME/.local/bin"
 
 
 # Added by Toolbox App
-export PATH="$PATH:~/Library/Application Support/JetBrains/Toolbox/scripts"
+export PATH="$PATH:/Users/vijish.varghese/Library/Application Support/JetBrains/Toolbox/scripts"
 
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="~/.rd/bin:$PATH"
+export PATH="/Users/vijish.varghese/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

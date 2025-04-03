@@ -1,50 +1,42 @@
-##### read -p "Should the shortcuts be displayed? (y): " response
-#####
-##### Convert response to lowercase and check
-##### response=${response,,}  # Convert to lowercase
-##### $FLAG_STATUS
-##### yba - yes bash alias
-if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "yes" ]]; then
-  # <!>------------------------------------------------------------------------------------------------------------------<!> #
-  # <!>--------------------------------------------BASH_ALIASES----------------------------------------------------------<!> #
-  # <!>------------------------------------------------------------------------------------------------------------------<!> #
-  # echo "#--<!>--------------------------------------------------------------------------------------------x-<!>"
-  # echo "# <!> TO MODIFY BASH ALIASES -> sudo vi ~/.bash_aliases OR sudo open -a vsc ~/.bash_aliases"
-  # echo "# <!> TO RELOAD/REFRESH BASH ALIASES -> source ~/.bash_aliases or . ~/.bash_aliases"
-  echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------e--------<!> #"
-  echo "# <!> Edit profile/aliases/rc/functions -> editbp,editba,editbrc,editbfn,edithosts,editstarship"
-  # echo "# <!> [start][stop][bounce] -> (awstransform), (tomcat), (nginx), (mongo)"
-  echo "# <!> [id][start][bounce][stop] -> (idserver), (runserver), (bounceserver), (haltserver)"
-  echo "# <!> [Open Folder A] -> (tmp,details,manuals,vscwa,mystudydetails, mystudy, cloud, onedrive, dropbox, gdrivebelk, newhorizons)"
-  echo "# <!> [Open Folder B] -> (apprebuild, neatscan, family, cota, dev, wa, src, tax, immigration)"
-  echo "# <!> [Open Folder C] -> (gtvd) - VDRIVE, (gtvlrn) - vd_learn, (gtsh) - Scripts Home, (gtpy) - PY Scripts Home"
-  echo "# <!> [Open WA] -> (detailswa, belksfccwa, mystudydetailswa)"
-  echo "# <!> [Reload] -> bash profile/aliases/rc/functions -> reloadbp, reloadba, reloadbrc, reloadfn"
-  # echo "# <!> [CLIs] -> startmybox,stopmybox,restartmybox,myboxstatus,cleanstart,purgebbfb4logs,sfcclog,ncli-numi cli"
-  echo "# <!> [CLIs] -> (ncli) - numi cli, (py3) - python3, (jvms)-List available JAVA Homes"
-  echo "# <!> [EDITORS] -> vsc (VISUAL STUDIO CODE), atom (ATOM), subl (SUBLIME), bbed (BBEDIT), bred (BRACKETS)"
-  echo "# <!> [CODERS] -> pyed (PY Charm CE), jaed (Intellij Ultimate), dred (Android Studio), xcod (XCode), swpl (Swift Playgroud)"
-  # echo "# <!> [SFCC - CLI] -> sfcli, sfcliauth, sfclisblist, sfclirenewauth, sfclisbdtl, sfclisbact, sfclisearchsb"
-  # echo "# <!> [SRCs] -> belkcore, belkmobileapp, setnvm"
-  echo "# <!> [CD] -> cda, cdb, cdc, cdd, cde"
-  echo "# <!> [SRCs] -> setnvm"
-  echo "# <!> [GITC] -> gbjira, gbstatus, gbpbase, gbranch, gbdel, gbcom, gbpush, gssh, gsshadd, gbconfig"
-  echo "# <!> [CMDs] -> ltra, uhm, rhm, vfreeport, cpwd, runserver, haltserver, scriptshm, jenv_set_java_home"
-  echo "# <!> [MAPP] -> iosappstart, belkmobileapp, openiosws"
-  echo "# <!> [SEPA] -> sepad [Date], sepae [ENTRY][Date, LogTag], separ [RETURN][Date, LogTag], sepas [symbol, length]"
-  echo "# <!> [APPS] -> typingmaster, meld, diffmerge"
-  echo "# <!> [BREW] -> bprefix, bcellar, bservices"
-  echo "# <!> [SHRT] -> luno-dos-tres, lnabct-yz, ln-15-2125-2630-3135-3640t, lnr123-456-789t, lnr-123-456-789-t"
-  echo "# <!> [SHRT] -> dtodo, ttag, gotoscripts, gtvd, gtsh, gtpy, subl, bbed, bred, pyed, jaed, dred, xcod, swpl, sptl"
-  echo "# <!> [UTLS] -> keepmealive, filenamer, 64codec, editrcloneconfig, verhis, opendailytodo, strlen"
-  echo "# <!> [UTLS] -> gfp [Get File Path], fnc [File Name Creator], camelc [Camel Caser]"
-  echo "# <!> [STMP] -> stampIt [t] time, [d] date, [n] name, [T] date time, [D] name date, [N] name date time"
-  echo "# <!> [GOTO] -> goto [h] head on terminal, [t] tail on terminal, [H] head to file, [T] tail to file"
-  echo "# <!> [GOTOH/T] -> gotoh [h] head on terminal, gotot [t] tail on terminal"
-  echo "# <!> [NTW] -> iplocal[local IP], ippub[public IP]"
-  echo "# <!> [INFO] -> gdate would be used for date from coreutils"
-  echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------x--------<!> #"
-fi
+# <!>------------------------------------------------------------------------------------------------------------------<!> #
+# <!>--------------------------------------------BASH_ALIASES----------------------------------------------------------<!> #
+# <!>------------------------------------------------------------------------------------------------------------------<!> #
+# echo "#--<!>--------------------------------------------------------------------------------------------x-<!>"
+# echo "# <!> TO MODIFY BASH ALIASES -> sudo vi ~/.bash_aliases OR sudo open -a vsc ~/.bash_aliases"
+# echo "# <!> TO RELOAD/REFRESH BASH ALIASES -> source ~/.bash_aliases or . ~/.bash_aliases"
+echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------e--------<!> #"
+echo "# <!> Edit profile/aliases/rc/functions -> editbp,editba,editbrc,editbfn,edithosts,editstarship"
+# echo "# <!> [start][stop][bounce] -> (awstransform), (tomcat), (nginx), (mongo)"
+echo "# <!> [id][start][bounce][stop] -> (idserver), (runserver), (bounceserver), (haltserver)"
+echo "# <!> [Open Folder A] -> (tmp,details,manuals,vscwa,mystudydetails, mystudy, cloud, onedrive, dropbox, gdrivebelk, newhorizons)"
+echo "# <!> [Open Folder B] -> (apprebuild, neatscan, family, cota, dev, wa, src, tax, immigration)"
+echo "# <!> [Open Folder C] -> (gtvd) - VDRIVE, (gtvlrn) - vd_learn, (gtsh) - Scripts Home, (gtpy) - PY Scripts Home"
+echo "# <!> [Open WA] -> (detailswa, belksfccwa, mystudydetailswa)"
+echo "# <!> [Reload] -> bash profile/aliases/rc/functions -> reloadbp, reloadba, reloadbrc, reloadfn"
+# echo "# <!> [CLIs] -> startmybox,stopmybox,restartmybox,myboxstatus,cleanstart,purgebbfb4logs,sfcclog,ncli-numi cli"
+echo "# <!> [CLIs] -> (ncli) - numi cli, (py3) - python3, (jvms)-List available JAVA Homes"
+echo "# <!> [EDITORS] -> vsc (VISUAL STUDIO CODE), atom (ATOM), subl (SUBLIME), bbed (BBEDIT), bred (BRACKETS)"
+echo "# <!> [CODERS] -> pyed (PY Charm CE), jaed (Intellij Ultimate), dred (Android Studio), xcod (XCode), swpl (Swift Playgroud)"
+# echo "# <!> [SFCC - CLI] -> sfcli, sfcliauth, sfclisblist, sfclirenewauth, sfclisbdtl, sfclisbact, sfclisearchsb"
+# echo "# <!> [SRCs] -> belkcore, belkmobileapp, setnvm"
+echo "# <!> [CD] -> cda, cdb, cdc, cdd, cde"
+echo "# <!> [SRCs] -> setnvm"
+echo "# <!> [GITC] -> gbjira, gbstatus, gbpbase, gbranch, gbdel, gbcom, gbpush, gssh, gsshadd, gbconfig"
+echo "# <!> [CMDs] -> ltra, uhm, rhm, vfreeport, cpwd, runserver, haltserver, scriptshm, jenv_set_java_home"
+echo "# <!> [MAPP] -> iosappstart, belkmobileapp, openiosws"
+echo "# <!> [SEPA] -> sepad [Date], sepae [ENTRY][Date, LogTag], separ [RETURN][Date, LogTag], sepas [symbol, length]"
+echo "# <!> [APPS] -> typingmaster, meld, diffmerge"
+echo "# <!> [BREW] -> bprefix, bcellar, bservices"
+echo "# <!> [SHRT] -> luno-dos-tres, lnabct-yz, ln-15-2125-2630-3135-3640t, lnr123-456-789t, lnr-123-456-789-t"
+echo "# <!> [SHRT] -> dtodo, ttag, gotoscripts, gtvd, gtsh, gtpy, subl, bbed, bred, pyed, jaed, dred, xcod, swpl, sptl"
+echo "# <!> [UTLS] -> keepmealive, filenamer, 64codec, editrcloneconfig, verhis, opendailytodo, strlen"
+echo "# <!> [UTLS] -> gfp [Get File Path], fnc [File Name Creator], camelc [Camel Caser]"
+echo "# <!> [STMP] -> stampIt [t] time, [d] date, [n] name, [T] date time, [D] name date, [N] name date time"
+echo "# <!> [GOTO] -> goto [h] head on terminal, [t] tail on terminal, [H] head to file, [T] tail to file"
+echo "# <!> [GOTOH/T] -> gotoh [h] head on terminal, gotot [t] tail on terminal"
+echo "# <!> [NTW] -> iplocal[local IP], ippub[public IP]"
+echo "# <!> [INFO] -> gdate would be used for date from coreutils"
+echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------x--------<!> #"
 
 ONE_DRIVE_HOME="/Users/viva/Library/CloudStorage/OneDrive-Personal"
 
@@ -67,9 +59,6 @@ ATOM_APP="/Applications/Atom.app"
 SUBLIME_APP="/Applications/Sublime\ Text.app"
 BBEDIT_APP="/Applications/BBEdit.app"
 BRACKETS_APP="/Applications/Brackets.app"
-
-# icloud drive folder quick access
-alias icdrive="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
 alias subl="open $SUBLIME_APP"
 alias bbed="open $BBEDIT_APP"
@@ -272,42 +261,42 @@ alias edithosts="$SU_SHELL_EDITOR /private/etc/hosts"
 alias editstarship="$SHELL_EDITOR ~/.config/starship.toml"
 
 #sfcli, sfcliauth, sfclisblist, sfclirenewauth, sfclisbdtl, sfclisbact, sfclisearchsb
-#### alias sfcli='sfcc-ci-macos'
-#### alias sfcliauth='sfcli client:auth $SFCC_CI_API_KEY $SFCC_CI_API_SECRET $SFCC_CI_API_USER $SFCC_CI_API_USER_PW --renew'
-#### alias sfclirenewauth='sfcc-ci client:auth:renew'
-#### alias sfclisblist="sfcli sandbox:list -S instance -j | jq -C '.[] | {ods: .realm, number: .instance, odsId: .id, state: .state}'"
-#### alias sfclisbdtl='. ${SCRIPTS_HOME}/sfcc_cli_sb_dtls.sh'
-#### alias sfclisbact='. ${SCRIPTS_HOME}/sfcc_cli_sb_start-stop-restart.sh'
-#### alias sfclisearchsb='. ${SCRIPTS_HOME}/sfcc_cli_sb_id_search.sh'
+alias sfcli='sfcc-ci-macos'
+alias sfcliauth='sfcli client:auth $SFCC_CI_API_KEY $SFCC_CI_API_SECRET $SFCC_CI_API_USER $SFCC_CI_API_USER_PW --renew'
+alias sfclirenewauth='sfcc-ci client:auth:renew'
+alias sfclisblist="sfcli sandbox:list -S instance -j | jq -C '.[] | {ods: .realm, number: .instance, odsId: .id, state: .state}'"
+alias sfclisbdtl='. ${SCRIPTS_HOME}/sfcc_cli_sb_dtls.sh'
+alias sfclisbact='. ${SCRIPTS_HOME}/sfcc_cli_sb_start-stop-restart.sh'
+alias sfclisearchsb='. ${SCRIPTS_HOME}/sfcc_cli_sb_id_search.sh'
 
 #Folder Shortcuts
 alias tmp='open ~/tmp'
 alias details='open ${V_DRIVE}/vd_details'
-#### alias mystudydetails='open /Users/afuvxv2/Cloud/OneDrive/mystudyv/mystudyv_details'
-#### alias manuals='open /Users/afuvxv2/Cloud/OneDrive/Manuals'
-#### alias vscwa='open /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace'
-#### alias mystudy='open /Users/afuvxv2/Cloud/OneDrive/MyStudy'
-#### #Cloud Folders
-#### alias cloud='open /Users/afuvxv2/Cloud/OneDrive/cloud'
-#### alias onedrive='open /Users/afuvxv2/Cloud/OneDrive'
-#### alias dropbox='open /Users/afuvxv2/Cloud/OneDrive/cloud/Dropbox'
-#### alias gdrivebelk='open /Users/afuvxv2/Google\ Drive\ \(vijish_varghese@belk.com\)/'
-#### #Quick Ref Folders
-#### alias newhorizons='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/2020_NewHorizons'
-#### alias apprebuild='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/Mobile/Mobile\ App\ Rebuild'
+alias mystudydetails='open /Users/afuvxv2/Cloud/OneDrive/mystudyv/mystudyv_details'
+alias manuals='open /Users/afuvxv2/Cloud/OneDrive/Manuals'
+alias vscwa='open /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace'
+alias mystudy='open /Users/afuvxv2/Cloud/OneDrive/MyStudy'
+#Cloud Folders
+alias cloud='open /Users/afuvxv2/Cloud/OneDrive/cloud'
+alias onedrive='open /Users/afuvxv2/Cloud/OneDrive'
+alias dropbox='open /Users/afuvxv2/Cloud/OneDrive/cloud/Dropbox'
+alias gdrivebelk='open /Users/afuvxv2/Google\ Drive\ \(vijish_varghese@belk.com\)/'
+#Quick Ref Folders
+alias newhorizons='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/2020_NewHorizons'
+alias apprebuild='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/Mobile/Mobile\ App\ Rebuild'
 alias dev='open ~/dev'
 alias wa='open ~/dev/wa'
 alias src='open ~/src'
 #WorkArea/WorkSpace Shortcuts
-#### alias belksfccwa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/belk_sfcc.code-workspace'
-#### alias detailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/details_persona.code-workspace'
-#### alias mystudydetailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/mystudyv_details.code-workspace'
-#### #Personal Quick Folders
-#### alias family='open /Users/afuvxv2/Cloud/OneDrive/Family'
-#### alias cota='open /Users/afuvxv2/Cloud/OneDrive/Family/04_MatthewJosephMaroky/COTA'
-#### alias neatscan='open /Users/afuvxv2/Cloud/OneDrive/Neat_Scan'
-#### alias tax='open /Users/afuvxv2/Cloud/OneDrive/Tax'
-#### alias immigration='open /Users/afuvxv2/Cloud/OneDrive/Immigration'
+alias belksfccwa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/belk_sfcc.code-workspace'
+alias detailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/details_persona.code-workspace'
+alias mystudydetailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/mystudyv_details.code-workspace'
+#Personal Quick Folders
+alias family='open /Users/afuvxv2/Cloud/OneDrive/Family'
+alias cota='open /Users/afuvxv2/Cloud/OneDrive/Family/04_MatthewJosephMaroky/COTA'
+alias neatscan='open /Users/afuvxv2/Cloud/OneDrive/Neat_Scan'
+alias tax='open /Users/afuvxv2/Cloud/OneDrive/Tax'
+alias immigration='open /Users/afuvxv2/Cloud/OneDrive/Immigration'
 
 alias typingmaster='open /Applications/PlayOnMac.app'
 
