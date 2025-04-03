@@ -37,7 +37,6 @@ if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "yes" ]]; then
   echo "# <!> [SHRT] -> luno-dos-tres, lnabct-yz, ln-15-2125-2630-3135-3640t, lnr123-456-789t, lnr-123-456-789-t"
   echo "# <!> [SHRT] -> dtodo, ttag, gotoscripts, gtvd, gtsh, gtpy, subl, bbed, bred, pyed, jaed, dred, xcod, swpl, sptl"
   echo "# <!> [UTLS] -> keepmealive, filenamer, 64codec, editrcloneconfig, verhis, opendailytodo, strlen"
-  echo "# <!> [UTLS] -> gfp [Get File Path], fnc [File Name Creator], camelc [Camel Caser]"
   echo "# <!> [STMP] -> stampIt [t] time, [d] date, [n] name, [T] date time, [D] name date, [N] name date time"
   echo "# <!> [GOTO] -> goto [h] head on terminal, [t] tail on terminal, [H] head to file, [T] tail to file"
   echo "# <!> [GOTOH/T] -> gotoh [h] head on terminal, gotot [t] tail on terminal"
@@ -45,31 +44,31 @@ if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "yes" ]]; then
   echo "# <!> [INFO] -> gdate would be used for date from coreutils"
   echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------x--------<!> #"
 fi
-
 ONE_DRIVE_HOME="/Users/viva/Library/CloudStorage/OneDrive-Personal"
 
-V_DRIVE="/Users/vijish.varghese/VDrive"
+# /Users/viva/VDrive/vd_scripts/97_scripts/automator/scripts_shell/bash/bash_scripts/97_scripts
+# SCRIPTS_HOME="$ONE_DRIVE_HOME/Treasures-n-Utils/97_scripts"
+V_DRIVE="/Users/viva/VDrive"
 LRN_HOME="${V_DRIVE}/vd_learn"
-SCRIPTS_HOME="${V_DRIVE}/vd_scripts/97_scripts"
-PY_SCRIPTS_HOME="${V_DRIVE}/vd_scripts/97_py_scripts"
+SCRIPTS_HOME="${V_DRIVE}/vd_scripts/97_scripts/automator/scripts_shell/bash/bash_scripts/97_scripts"
+# /Users/viva/VDrive/vd_scripts/97_scripts/automator/scripts_shell/python/97_py_scripts
+PY_SCRIPTS_HOME="${V_DRIVE}/vd_scripts/97_scripts/automator/scripts_shell/python/97_py_scripts"
 alias gtvd="cd ${V_DRIVE}"
 alias gtvlrn="cd ${LRN_HOME}"
 alias gtsh="cd ${SCRIPTS_HOME}"
 alias gtpy="cd ${PY_SCRIPTS_HOME}"
 
-alias myqueue="open https://qvcprod.service-now.com/itsp?id=itsp_index"
+SPACE_STRING=" "
+EMPTY_STRING=""
 
-alias v2025="cd /Users/vijish.varghese/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025 && open ."
-alias v2025holidays="open /Users/vijish.varghese/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025/9000_2025_Holidays/2025-holiday-schedule.pdf"
+alias SPSTR=echo ${SPACE_STRING}
+alias EMSTR=echo ${EMPTY_STRING}
 
 vsc_app="/Applications/Visual Studio Code.app"
 ATOM_APP="/Applications/Atom.app"
 SUBLIME_APP="/Applications/Sublime\ Text.app"
 BBEDIT_APP="/Applications/BBEdit.app"
 BRACKETS_APP="/Applications/Brackets.app"
-
-# icloud drive folder quick access
-alias icdrive="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
 
 alias subl="open $SUBLIME_APP"
 alias bbed="open $BBEDIT_APP"
@@ -89,6 +88,9 @@ alias xcod="open $XCODE"
 alias swpl="open $SWIFT_PLAYGROUNDS"
 alias sptl="open $SPRING_TOOLS_SUITE"
 
+# icloud drive folder quick access
+alias icdrive="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"
+
 #####EDITOR CONFIGURATION FOR BASH
 SHELL_EDITOR_APP=$ATOM_APP
 SHELL_EDITOR="open -a $SHELL_EDITOR_APP"
@@ -99,55 +101,24 @@ SU_SHELL_EDITOR="sudo open -a $SHELL_EDITOR_APP"
 
 alias jvms="/usr/libexec/java_home -V"
 alias py3='python3'
-alias ncli='/opt/homebrew/bin/numi-cli'
-# Get File Path
-alias gfp='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/fio/get_file_path_v.py'
-# File Name Creator
-alias fnc='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/fio/read_input_till_enter_v.py'
-# Camel Caser
-alias camelc='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/fio/to_camel_case_v.py'
-
-
-
-####----<!>--My Py Utils----------------------------------------<BEGIN>------------------------------------------------<!>
-##~~~~[Wed Mar 05 2025  4:40PM (EST-0500)]  :~
-##~~~~λ versioner
-##~~~~Enter a space-separated sentence (or 'x!' to exit): vish is the best
-##~~~~Enter the version number (e.g., 2): 3
-##~~~~Enter the file extension (e.g., txt): py
-##~~~~Enter the separator for camelCase transformation (default is ''):
-##~~~~Include current timestamp? (n/y/s/e/b, default is n): e
-##~~~~Output (copied to clipboard): vishIsTheBest_3v_20250305164059561.py
-##~~~~
-##~~~~Press Enter to continue...
-# alias versioner='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/dio/prog_File_Name_Generator_9av_20250305162717331.py'
-alias versioner='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/dio/progFileNameGen_10av_20250305163835901.py'
-alias commenter='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/dio/comment_generator_4v.py'
-alias appenddt='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/dio/dateBasedFileNameAppender_1v.py'
-alias urlformer='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/dio/url_former_4v.py'
-alias quicklinks='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/dio/quick_links_a_1v.py'
-
-####----<!>--My Py Utils----------------------------------------<-END->------------------------------------------------<!>
-
-
+alias ncli='/usr/local/bin/numi-cli'
 
 # https://opensource.com/article/19/7/bash-aliases
-alias ls='ls -F'
-alias ll='ls -lh'
-# Mac Complaining : ls: unrecognized option `--human-readable'
-# alias lt='ls --human-readable --size -1 -S --classify'
-alias lt='du -sh * | sort -h'
+alias lt='ls --human-readable --size -1 -S --classify'
 # Sort by modification time
 alias left='ls -t -1'
 # Add a copy progress bar
 alias cpv='rsync -ah --info=progress2'
 # https://dev.to/joaovitor/exa-instead-of-ls-1onl
-#alias l='exa'
-alias la='exa -a'
-alias ll='exa -lah'
-alias lsa='exa --color=auto'
-alias ncal='numi-cli'
-alias ccal='calc'
+# alias l='exa'
+# alias la='exa -a'
+# alias ll='exa -lah'
+# alias ls='exa --color=auto'
+
+alias el='eza'
+alias ela='eza -a'
+alias ell='eza -lah'
+alias els='eza --color=auto'
 
 alias cda='cd ..'
 alias cdb='cd .. && cd ..'
@@ -216,16 +187,9 @@ alias iosappstart='. $SCRIPTS_HOME/ios_reactnative_start.sh'
 alias sfcclog='node /Applications/dw_logTool/log'
 alias logb4='node /Applications/dw_logTool/log bbfb4'
 
-
-alias idserver='. ${SCRIPTS_HOME}/ .sh'
 alias runserver='. ${SCRIPTS_HOME}/server_start.sh'
 alias haltserver='. ${SCRIPTS_HOME}/server_stop.sh'
-alias bounceserver='. ${SCRIPTS_HOME}/server_bounce.sh'
 alias vfreeport='. ${SCRIPTS_HOME}/port_terminator.sh'
-
-# START/RESTART(BOUNCE)/STOP(HALT) A Brew Service--BEGIN--
-alias bsvc='. ${SCRIPTS_HOME}/brew_svs_start_stop_bounce.sh'
-# START/RESTART(BOUNCE)/STOP(HALT) A Brew Service---END---
 
 # Copy the PWD to the Clipboard
 alias cpwd="pwd | tr -d '\n' | pbcopy && echo '<!>---[[INFO]]---pwd copied to CLIPBOARD !!!'"
@@ -233,81 +197,65 @@ alias scriptshm='cd ${SCRIPTS_HOME}'
 alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 #
 # alias sfci='. /Users/afuvxv2/sdk/sfcccli/sfcc-ci/sfcc-ci-macos'
+
 alias belkcore='cd /Users/afuvxv2/src/belk/sfcc/belk_core/demandware'
 alias belkmobileapp='cd /Users/afuvxv2/src/belk/mapp-react/belkmobileapp && nvm use 14.17.6'
 alias openiosws="open -a xcode '/Users/afuvxv2/src/belk/mapp-react/belkmobileapp/ios/belk.xcworkspace'"
 alias setnvm='nvm use 14.17.6'
 
-### alias editbp='sudo open subl ~/.bash_profile'
-### # alias editbp='sudo open -a Sublime\ Text.app ~/.bash_profile'
-### alias editba='sudo open -a Sublime\ Text.app ~/.bash_aliases'
-### alias editbrc='sudo open -a Sublime\ Text.app ~/.bashrc'
-### alias editbfn='sudo open -a Sublime\ Text.app ~/.bash_functions'
-### alias edithosts='sudo Sublime\ Text.app -a /private/etc/hosts'
-### alias editstarship='open -a Sublime\ Text.app ~/.config/starship.toml'
+# alias editbp='sudo open -a atom ~/.bash_profile'
+# alias editba='sudo open -a atom ~/.bash_aliases'
+# alias editbrc='sudo open -a atom ~/.bashrc'
+# alias editbfn='sudo open -a atom ~/.bash_functions'
+# alias edithosts='sudo atom -a /private/etc/hosts'
+# alias editstarship='atom -a ~/.config/starship.toml'
 
-####### Deprecated on 2023.12.28.9.45.06.CDT as started getting error
-####### [Thu Dec 28 2023  9:32AM (CST-0600)]  :~
-####### λ editba
-####### sudo: atom: command not found
-### alias editbp='sudo atom -a ~/.bash_profile'
-### alias editba='sudo atom -a ~/.bash_aliases'
-### alias editbrc='sudo atom -a ~/.bashrc'
-### alias editbfn='sudo atom -a ~/.bash_functions'
-### alias edithosts='sudo atom -a /private/etc/hosts'
-### alias editstarship='atom -a ~/.config/starship.toml'
-####### Deprecated on 2023.12.28.9.49.46.CDT as moving it to a pointer instead of sticky reference
-### alias editbp='sudo open -a atom ~/.bash_profile'
-### alias editba='sudo open -a atom ~/.bash_aliases'
-### alias editbrc='sudo open -a atom ~/.bashrc'
-### alias editbfn='sudo open -a atom ~/.bash_functions'
-### alias edithosts='sudo open -a atom /private/etc/hosts'
-### alias editstarship='open -a atom ~/.config/starship.toml'
-####### Using sh_editor alias to configure the editor at a single point for better maintainability
 alias editbp="$SU_SHELL_EDITOR ~/.bash_profile"
 alias editba="$SU_SHELL_EDITOR ~/.bash_aliases"
 alias editbrc="$SU_SHELL_EDITOR ~/.bashrc"
 alias editbfn="$SU_SHELL_EDITOR ~/.bash_functions"
+alias editbpy="$SU_SHELL_EDITOR ~/.bash_pythons"
+alias editbpyfn="$SU_SHELL_EDITOR ~/.bash_python_functions.sh"
 alias edithosts="$SU_SHELL_EDITOR /private/etc/hosts"
 alias editstarship="$SHELL_EDITOR ~/.config/starship.toml"
 
 #sfcli, sfcliauth, sfclisblist, sfclirenewauth, sfclisbdtl, sfclisbact, sfclisearchsb
-#### alias sfcli='sfcc-ci-macos'
-#### alias sfcliauth='sfcli client:auth $SFCC_CI_API_KEY $SFCC_CI_API_SECRET $SFCC_CI_API_USER $SFCC_CI_API_USER_PW --renew'
-#### alias sfclirenewauth='sfcc-ci client:auth:renew'
-#### alias sfclisblist="sfcli sandbox:list -S instance -j | jq -C '.[] | {ods: .realm, number: .instance, odsId: .id, state: .state}'"
-#### alias sfclisbdtl='. ${SCRIPTS_HOME}/sfcc_cli_sb_dtls.sh'
-#### alias sfclisbact='. ${SCRIPTS_HOME}/sfcc_cli_sb_start-stop-restart.sh'
-#### alias sfclisearchsb='. ${SCRIPTS_HOME}/sfcc_cli_sb_id_search.sh'
+alias sfcli='sfcc-ci-macos'
+alias sfcliauth='sfcli client:auth $SFCC_CI_API_KEY $SFCC_CI_API_SECRET $SFCC_CI_API_USER $SFCC_CI_API_USER_PW --renew'
+alias sfclirenewauth='sfcc-ci client:auth:renew'
+alias sfclisblist="sfcli sandbox:list -S instance -j | jq -C '.[] | {ods: .realm, number: .instance, odsId: .id, state: .state}'"
+alias sfclisbdtl='. ${SCRIPTS_HOME}/sfcc_cli_sb_dtls.sh'
+alias sfclisbact='. ${SCRIPTS_HOME}/sfcc_cli_sb_start-stop-restart.sh'
+alias sfclisearchsb='. ${SCRIPTS_HOME}/sfcc_cli_sb_id_search.sh'
 
 #Folder Shortcuts
 alias tmp='open ~/tmp'
-alias details='open ${V_DRIVE}/vd_details'
-#### alias mystudydetails='open /Users/afuvxv2/Cloud/OneDrive/mystudyv/mystudyv_details'
-#### alias manuals='open /Users/afuvxv2/Cloud/OneDrive/Manuals'
-#### alias vscwa='open /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace'
-#### alias mystudy='open /Users/afuvxv2/Cloud/OneDrive/MyStudy'
-#### #Cloud Folders
-#### alias cloud='open /Users/afuvxv2/Cloud/OneDrive/cloud'
-#### alias onedrive='open /Users/afuvxv2/Cloud/OneDrive'
-#### alias dropbox='open /Users/afuvxv2/Cloud/OneDrive/cloud/Dropbox'
-#### alias gdrivebelk='open /Users/afuvxv2/Google\ Drive\ \(vijish_varghese@belk.com\)/'
-#### #Quick Ref Folders
-#### alias newhorizons='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/2020_NewHorizons'
-#### alias apprebuild='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/Mobile/Mobile\ App\ Rebuild'
+alias details='open /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/Details'
+alias mystudydetails='open /Users/afuvxv2/Cloud/OneDrive/mystudyv/mystudyv_details'
+alias manuals='open /Users/afuvxv2/Cloud/OneDrive/Manuals'
+alias vscwa='open /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace'
+alias mystudy='open /Users/afuvxv2/Cloud/OneDrive/MyStudy'
+#Cloud Folders
+alias cloud='open /Users/afuvxv2/Cloud/OneDrive/cloud'
+alias onedrive='open /Users/afuvxv2/Cloud/OneDrive'
+alias dropbox='open /Users/afuvxv2/Cloud/OneDrive/cloud/Dropbox'
+alias gdrivebelk='open /Users/afuvxv2/Google\ Drive\ \(vijish_varghese@belk.com\)/'
+#Quick Ref Folders
+alias newhorizons='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/2020_NewHorizons'
+alias apprebuild='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/Mobile/Mobile\ App\ Rebuild'
 alias dev='open ~/dev'
 alias wa='open ~/dev/wa'
 alias src='open ~/src'
 #WorkArea/WorkSpace Shortcuts
-#### alias belksfccwa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/belk_sfcc.code-workspace'
-#### alias detailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/details_persona.code-workspace'
-#### alias mystudydetailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/mystudyv_details.code-workspace'
-#### #Personal Quick Folders
-#### alias family='open /Users/afuvxv2/Cloud/OneDrive/Family'
-#### alias cota='open /Users/afuvxv2/Cloud/OneDrive/Family/04_MatthewJosephMaroky/COTA'
-#### alias neatscan='open /Users/afuvxv2/Cloud/OneDrive/Neat_Scan'
-#### alias tax='open /Users/afuvxv2/Cloud/OneDrive/Tax'
-#### alias immigration='open /Users/afuvxv2/Cloud/OneDrive/Immigration'
+alias belksfccwa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/belk_sfcc.code-workspace'
+alias detailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/details_persona.code-workspace'
+alias mystudydetailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/mystudyv_details.code-workspace'
+#Personal Quick Folders
+alias family='open /Users/afuvxv2/Cloud/OneDrive/Family'
+alias cota='open /Users/afuvxv2/Cloud/OneDrive/Family/04_MatthewJosephMaroky/COTA'
+alias neatscan='open /Users/afuvxv2/Cloud/OneDrive/Neat_Scan'
+alias tax='open /Users/afuvxv2/Cloud/OneDrive/Tax'
+alias immigration='open /Users/afuvxv2/Cloud/OneDrive/Immigration'
 
 alias typingmaster='open /Applications/PlayOnMac.app'
 

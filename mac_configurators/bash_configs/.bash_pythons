@@ -1,0 +1,30 @@
+#A custom bash file created to handle the python scritps, this is enable via bashrc. editbrc for details
+
+PY_SCRIPTS="/Users/viva/VDrive/vd_scripts/97_py_scripts"
+PY_LOGGER="$PY_SCRIPTS/vpy_modules/commons/logger"
+
+alias sepyent="py3 $PY_LOGGER/entry_v.py e"
+alias sepyentt="py3 $PY_LOGGER/entry_v.py et"
+
+alias sepyret="py3 $PY_LOGGER/return_v.py r"
+alias sepyrett="py3 $PY_LOGGER/return_v.py rt"
+
+alias sepybeg="py3 $PY_LOGGER/entry_v.py b"
+alias sepybegt="py3 $PY_LOGGER/entry_v.py bt"
+
+alias sepyend="py3 $PY_LOGGER/return_v.py e"
+alias sepyendt="py3 $PY_LOGGER/return_v.py et"
+
+alias sepysta="py3 $PY_LOGGER/entry_v.py s"
+alias sepystat="py3 $PY_LOGGER/entry_v.py st"
+
+alias sepysto="py3 $PY_LOGGER/return_v.py s"
+alias sepystot="py3 $PY_LOGGER/return_v.py st"
+
+
+
+#This cannot handle scenario like only get back the filename, if needed then  a separate alias need to be done for it.
+alias stampitpy='stampItPython'
+alias stampitcpy='stampItPythonToday'
+
+alias stampitpyfe='stampItPythonForFileNameAndExtn'
