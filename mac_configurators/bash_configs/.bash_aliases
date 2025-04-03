@@ -45,9 +45,9 @@ if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "yes" ]]; then
   echo "# <!> [INFO] -> gdate would be used for date from coreutils"
   echo "# <!>--------------------------------------------< BASH_ALIASES >------------------------------------------------x--------<!> #"
 fi
-ONE_DRIVE_HOME="/Users/viva/Library/CloudStorage/OneDrive-Personal"
-
-V_DRIVE="/Users/vijish.varghese/VDrive"
+ONE_DRIVE_HOME="~/Library/CloudStorage/OneDrive-Personal"
+GITHUB="~/VDrive/vd_dev/e_src/GitHub_Ref"
+V_DRIVE="~/VDrive"
 LRN_HOME="${V_DRIVE}/vd_learn"
 SCRIPTS_HOME="${V_DRIVE}/vd_scripts/97_scripts"
 PY_SCRIPTS_HOME="${V_DRIVE}/vd_scripts/97_py_scripts"
@@ -58,8 +58,9 @@ alias gtpy="cd ${PY_SCRIPTS_HOME}"
 
 alias myqueue="open https://qvcprod.service-now.com/itsp?id=itsp_index"
 
-alias v2025="cd /Users/vijish.varghese/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025 && open ."
-alias v2025holidays="open /Users/vijish.varghese/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025/9000_2025_Holidays/2025-holiday-schedule.pdf"
+alias v2025="cd ~/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025 && open ."
+alias v2025holidays="open ~/Library/CloudStorage/OneDrive-QVC\,Inc/QRG_Ref_OD/2025/9000_2025_Holidays/2025-holiday-schedule.pdf"
+alias github="cd $GITHUB"
 
 vsc_app="/Applications/Visual Studio Code.app"
 ATOM_APP="/Applications/Atom.app"
@@ -125,8 +126,6 @@ alias quicklinks='py3 ${PY_SCRIPTS_HOME}/vpy_modules/commons/dio/quick_links_a_1
 
 ####----<!>--My Py Utils----------------------------------------<-END->------------------------------------------------<!>
 
-
-
 # https://opensource.com/article/19/7/bash-aliases
 alias ls='ls -F'
 alias ll='ls -lh'
@@ -167,14 +166,6 @@ alias localfontdir="open ~/.local/share/fonts/"
 alias usrconfigs="open ~/.config/"
 alias editjrnl="atom -a ~/.config/jrnl/jrnl.yaml"
 
-# [ViVa @ 04-Apr-2024,Thu 11:36 EDT] Commented out as it is obselete kept for ref, can be moved on a later version once version controlled.
-# <!>-AWS DEV OPS TRANSFORM SERVER START STOP REBOOT --BEGIN--
-# alias startawstransform='aws ec2 start-instances --instance-ids i-08b95a4757677d70b'
-# alias stopawstransform='aws ec2 stop-instances --instance-ids i-08b95a4757677d70b'
-# alias bounceawstransform='aws ec2 reboot-instances --instance-ids i-08b95a4757677d70b'
-
-# [ViVa @ 04-Apr-2024,Thu 11:37 EDT] - To be revisited as part of automator learning
-# alias keepmealive='. $SCRIPTS_HOME/keepmelive.sh'
 alias filenamer='. $SCRIPTS_HOME/filenamer.sh'
 alias 64codec='. $SCRIPTS_HOME/base64_encode_decode.sh'
 alias strlen='. $SCRIPTS_HOME/strlen.sh'
@@ -187,20 +178,12 @@ alias sepas='. $SCRIPTS_HOME/separator_symbol.sh'
 alias daij='. $SCRIPTS_HOME/daij_jrnl.sh'
 
 alias opendailytodo="open -a '/Applications/Microsoft Word.app/Contents/MacOS/Microsoft Word' '~/Documents/DailyToDoTemplate_202109214143723.dotx'"
-# alias typingmaster='. /Users/afuvxv2/Library/PlayOnMac/shortcuts/tmaster'
+# alias typingmaster='. ~/Library/PlayOnMac/shortcuts/tmaster'
 # alias typingmaster='. $SCRIPTS_HOME/typingmaster.sh'
 alias typingmaster="open -a '/Applications/PlayOnMac.app/Contents/MacOS/playonmac' '~/Library/PlayOnMac/wineprefix/TypingMaster_/drive_c/tmaster.exe'"
 
 alias meld='/Applications/Meld.app/Contents/MacOS/Meld'
 alias diffmerge='/Applications/DiffMerge.app/Contents/MacOS/DiffMerge'
-
-alias startmybox='. $SCRIPTS_HOME/startmybox.sh'
-alias stopmybox='. $SCRIPTS_HOME/stopmybox.sh'
-alias restartmybox='. $SCRIPTS_HOME/restartmybox.sh'
-alias purgebbfb4logs='. $SCRIPTS_HOME/bbfb4_log_purger.sh'
-alias cleanstart='purgebbfb4logs R && restartmybox'
-alias editrcloneconfig='atom -a ~/.config/rclone/rclone.conf'
-alias myboxstatus='. $SCRIPTS_HOME/myboxstatus.sh'
 
 alias stampIt='sh $SCRIPTS_HOME/dateit.sh'
 alias goto='clear && sh $SCRIPTS_HOME/goto.sh'
@@ -228,10 +211,6 @@ alias cpwd="pwd | tr -d '\n' | pbcopy && echo '<!>---[[INFO]]---pwd copied to CL
 alias scriptshm='cd ${SCRIPTS_HOME}'
 alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 #
-# alias sfci='. /Users/afuvxv2/sdk/sfcccli/sfcc-ci/sfcc-ci-macos'
-alias belkcore='cd /Users/afuvxv2/src/belk/sfcc/belk_core/demandware'
-alias belkmobileapp='cd /Users/afuvxv2/src/belk/mapp-react/belkmobileapp && nvm use 14.17.6'
-alias openiosws="open -a xcode '/Users/afuvxv2/src/belk/mapp-react/belkmobileapp/ios/belk.xcworkspace'"
 alias setnvm='nvm use 14.17.6'
 
 ### alias editbp='sudo open subl ~/.bash_profile'
@@ -242,23 +221,6 @@ alias setnvm='nvm use 14.17.6'
 ### alias edithosts='sudo Sublime\ Text.app -a /private/etc/hosts'
 ### alias editstarship='open -a Sublime\ Text.app ~/.config/starship.toml'
 
-####### Deprecated on 2023.12.28.9.45.06.CDT as started getting error
-####### [Thu Dec 28 2023  9:32AM (CST-0600)]  :~
-####### λ editba
-####### sudo: atom: command not found
-### alias editbp='sudo atom -a ~/.bash_profile'
-### alias editba='sudo atom -a ~/.bash_aliases'
-### alias editbrc='sudo atom -a ~/.bashrc'
-### alias editbfn='sudo atom -a ~/.bash_functions'
-### alias edithosts='sudo atom -a /private/etc/hosts'
-### alias editstarship='atom -a ~/.config/starship.toml'
-####### Deprecated on 2023.12.28.9.49.46.CDT as moving it to a pointer instead of sticky reference
-### alias editbp='sudo open -a atom ~/.bash_profile'
-### alias editba='sudo open -a atom ~/.bash_aliases'
-### alias editbrc='sudo open -a atom ~/.bashrc'
-### alias editbfn='sudo open -a atom ~/.bash_functions'
-### alias edithosts='sudo open -a atom /private/etc/hosts'
-### alias editstarship='open -a atom ~/.config/starship.toml'
 ####### Using sh_editor alias to configure the editor at a single point for better maintainability
 alias editbp="$SU_SHELL_EDITOR ~/.bash_profile"
 alias editba="$SU_SHELL_EDITOR ~/.bash_aliases"
@@ -267,43 +229,34 @@ alias editbfn="$SU_SHELL_EDITOR ~/.bash_functions"
 alias edithosts="$SU_SHELL_EDITOR /private/etc/hosts"
 alias editstarship="$SHELL_EDITOR ~/.config/starship.toml"
 
-#sfcli, sfcliauth, sfclisblist, sfclirenewauth, sfclisbdtl, sfclisbact, sfclisearchsb
-alias sfcli='sfcc-ci-macos'
-alias sfcliauth='sfcli client:auth $SFCC_CI_API_KEY $SFCC_CI_API_SECRET $SFCC_CI_API_USER $SFCC_CI_API_USER_PW --renew'
-alias sfclirenewauth='sfcc-ci client:auth:renew'
-alias sfclisblist="sfcli sandbox:list -S instance -j | jq -C '.[] | {ods: .realm, number: .instance, odsId: .id, state: .state}'"
-alias sfclisbdtl='. ${SCRIPTS_HOME}/sfcc_cli_sb_dtls.sh'
-alias sfclisbact='. ${SCRIPTS_HOME}/sfcc_cli_sb_start-stop-restart.sh'
-alias sfclisearchsb='. ${SCRIPTS_HOME}/sfcc_cli_sb_id_search.sh'
-
 #Folder Shortcuts
 alias tmp='open ~/tmp'
 alias details='open ${V_DRIVE}/vd_details'
-alias mystudydetails='open /Users/afuvxv2/Cloud/OneDrive/mystudyv/mystudyv_details'
-alias manuals='open /Users/afuvxv2/Cloud/OneDrive/Manuals'
-alias vscwa='open /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace'
-alias mystudy='open /Users/afuvxv2/Cloud/OneDrive/MyStudy'
+alias mystudydetails='open ~/Cloud/OneDrive/mystudyv/mystudyv_details'
+alias manuals='open ~/Cloud/OneDrive/Manuals'
+alias vscwa='open ~/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace'
+alias mystudy='open ~/Cloud/OneDrive/MyStudy'
 #Cloud Folders
-alias cloud='open /Users/afuvxv2/Cloud/OneDrive/cloud'
-alias onedrive='open /Users/afuvxv2/Cloud/OneDrive'
-alias dropbox='open /Users/afuvxv2/Cloud/OneDrive/cloud/Dropbox'
-alias gdrivebelk='open /Users/afuvxv2/Google\ Drive\ \(vijish_varghese@belk.com\)/'
+alias cloud='open ~/Cloud/OneDrive/cloud'
+alias onedrive='open ~/Cloud/OneDrive'
+alias dropbox='open ~/Cloud/OneDrive/cloud/Dropbox'
+alias gdrivebelk='open ~/Google\ Drive\ \(vijish_varghese@belk.com\)/'
 #Quick Ref Folders
-alias newhorizons='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/2020_NewHorizons'
-alias apprebuild='open /Users/afuvxv2/Cloud/OneDrive/Career/05_Belk/Mobile/Mobile\ App\ Rebuild'
+alias newhorizons='open ~/Cloud/OneDrive/Career/05_Belk/2020_NewHorizons'
+alias apprebuild='open ~/Cloud/OneDrive/Career/05_Belk/Mobile/Mobile\ App\ Rebuild'
 alias dev='open ~/dev'
 alias wa='open ~/dev/wa'
 alias src='open ~/src'
 #WorkArea/WorkSpace Shortcuts
-alias belksfccwa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/belk_sfcc.code-workspace'
-alias detailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/details_persona.code-workspace'
-alias mystudydetailswa='code -a /Users/afuvxv2/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/mystudyv_details.code-workspace'
+alias belksfccwa='code -a ~/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/belk_sfcc.code-workspace'
+alias detailswa='code -a ~/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/vsc_workspace/details_persona.code-workspace'
+alias mystudydetailswa='code -a ~/Cloud/OneDrive/Treasures-n-Utils/visual_studio_code/mystudyv_details.code-workspace'
 #Personal Quick Folders
-alias family='open /Users/afuvxv2/Cloud/OneDrive/Family'
-alias cota='open /Users/afuvxv2/Cloud/OneDrive/Family/04_MatthewJosephMaroky/COTA'
-alias neatscan='open /Users/afuvxv2/Cloud/OneDrive/Neat_Scan'
-alias tax='open /Users/afuvxv2/Cloud/OneDrive/Tax'
-alias immigration='open /Users/afuvxv2/Cloud/OneDrive/Immigration'
+alias family='open ~/Cloud/OneDrive/Family'
+alias cota='open ~/Cloud/OneDrive/Family/04_MatthewJosephMaroky/COTA'
+alias neatscan='open ~/Cloud/OneDrive/Neat_Scan'
+alias tax='open ~/Cloud/OneDrive/Tax'
+alias immigration='open ~/Cloud/OneDrive/Immigration'
 
 alias typingmaster='open /Applications/PlayOnMac.app'
 
@@ -338,7 +291,7 @@ alias stopnginx='sudo nginx -s stop'
 # <!>-LOCAL NGINX SERVER START STOP ---END---
 
 # <!>-LOCAL MONGO SERVER START STOP --BEGIN--
-# <!>-Local Mongo DB Location : /Users/afuvxv2/data/mongo_db
+# <!>-Local Mongo DB Location : ~/data/mongo_db
 alias startmongo='mongod --dbpath ~/data/mongo_db'
 # <!>-LOCAL MONGO SERVER START STOP --BEGIN--
 

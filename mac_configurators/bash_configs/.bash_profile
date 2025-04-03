@@ -1,9 +1,28 @@
+# $FLAG_STATUS
+# ybp - yes bash profile
+# yba - yes bash alias
+# ----------Uncomment the below line to enable the logs-------------
+# read -p "Display the environment details? (ybp, ybpv, ybpp, yba): " input_param
+# FLAG_STATUS=${input_param}
+# Upper Case for bash + 4.0
+# FLAG_STATUS=${input_param^^}
+# Upper Case for bash - 4.0
+FLAG_STATUS=""
+# ----------Uncomment the below line to enable the logs-------------
+# FLAG_STATUS=$(echo "$input_param" | tr 'a-z' 'A-Z')
+
 echo "# <!>--------------------------------------------< BASH_PROFILE >------------------------------------------------e--------<!> #"
 # <!>------------------------------------------------------------------------------------------------------------------<!> #
 # <!>--------------------------------------------BASH_PROFILE----------------------------------------------------------<!> #
 # <!>------------------------------------------------------------------------------------------------------------------<!> #
-echo "#----Current Shell ----> $0"
+if [ "$FLAG_STATUS" == "y" ]; then
+  echo "Is Log Enabled $FLAG_STATUS"
+  echo "#----Current Shell ----> $0"
+fi
+# M - Mac
 eval "$(/opt/homebrew/bin/brew shellenv)"
+# Intel Mac
+# eval "$(/usr/local/bin/brew shellenv)"
 # <!>-BREW PREFIX
 export BREW_PREFIX=$(brew --prefix)
 export BREW_CELLAR=$BREW_PREFIX/Cellar
@@ -119,16 +138,19 @@ export COLOR_LIGHT_GRAY='\e[0;37m'
 # <!>-Variables--<BEGIN>-
 
 # <!>-Is Logging Enabled
-IS_LOG_ENABLED="Y"
+IS_LOG_ENABLED="ybp"
+# IS_LOG_ENABLED="Y"
 # IS_LOG_ENABLED="N"
 
 # <!>-Is Version Logging Enabled
+IS_VERSION_LOG_ENABLED="ybpv"
 # IS_VERSION_LOG_ENABLED="Y"
-IS_VERSION_LOG_ENABLED="N"
+# IS_VERSION_LOG_ENABLED="N"
 
 # <!>-Is Path Logging Enabled
+IS_PATH_LOG_ENABLED="ybpp"
 # IS_PATH_LOG_ENABLED="Y"
-IS_PATH_LOG_ENABLED="N"
+# IS_PATH_LOG_ENABLED="N"
 
 # <!>-Variables--<END>-
 
@@ -173,25 +195,25 @@ echo "#                                 IS_PATH_LOG_ENABLED----<!>" $IS_PATH_LOG
 echo "#--<!>---------------------------------------------------------------------------------x-LOGGER-R-x-<!>"
 
 # <!> GLOBAL LOGGING ENABLED STATUS CHECK
-if [ "$IS_LOG_ENABLED" == "Y" ]; then
+if [ "$IS_LOG_ENABLED" == "$FLAG_STATUS" ]; then
   # echo "#---<!>--BREW_PREFIX--<BREW_PREFIX>-x-------------------------------------------------------x"
   echo "#   <!>-----BREW_PREFIX----------<!>" $BREW_PREFIX
   # echo "#---<!>--Inspect--<BEGIN>---#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#"
-  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
     echo "#---<!>--ANT_HOME--<ANT_HOME>-x-------------------------------------------------------------x"
     echo $ANT_HOME \[VERSION \-\>\] && ant -v
   else
     echo "#   <!>-----ANT_HOME-------------<!>" $ANT_HOME
   fi
 
-  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
     echo "#---<!>--JAVA_HOME--<JAVA_HOME>-x-----------------------------------------------------------x"
     echo JAVA_HOME------ $JAVA_HOME \[VERSION \-\>\] && java -version
   else
     echo "#   <!>-----JAVA_HOME------------<!>" $JAVA_HOME
   fi
 
-  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
     echo "#---<!>--MAVEN_HOME--<MAVEN_HOME>-x---------------------------------------------------------x"
     echo M2_HOME-------- $M2_HOME \[VERSION \-\>\] && mvn -v
   else
@@ -204,7 +226,7 @@ if [ "$IS_LOG_ENABLED" == "Y" ]; then
   # echo "#---<!>--DROID_TOOLS--<DROID_TOOLS>-x-------------------------------------------------------x"
   echo "#   <!>-----DROID_PLATFORM_TOOLS-<!>" $DROID_TOOLS
 
-  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
     echo "#---<!>--MONGO_HOME--<MONGO_HOME>-x---------------------------------------------------------x"
     echo MONGO_HOME-------- $MONGO_HOME \[VERSION \-\>\] && mongo -version
   else
@@ -232,25 +254,40 @@ if [ "$IS_LOG_ENABLED" == "Y" ]; then
   echo "#   <!>-----JMETER_HOME----------<!>" $JMETER_HOME
   # echo "#---<!>--JENKINS_HOME--<JENKINS_HOME>-x---------------------------------------------------------x"
   echo "#   <!>-----JENKINS_HOME----------<!>" $JENKINS_HM
-  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
     # echo "#---<!>--GRAILS_HOME--<GRAILS_HOME>-x---------------------------------------------------------x"
     echo "#   <!>-----GRAILS_HOME----------<!>" $GRAILS_HM \[VERSION \-\>\] && grails -version
   else
     echo "#   <!>-----GRAILS_HOME-------------<!>" $GRAILS_HM
   fi
-  if [ "$IS_VERSION_LOG_ENABLED" == "Y" ]; then
+  if [ "$IS_VERSION_LOG_ENABLED" == "$FLAG_STATUS" ]; then
     # echo "#---<!>--GO_HOME--<GO_HOME>-x---------------------------------------------------------x"
     echo "#   <!>-----GO_HOME----------<!>" $GO_HM \[VERSION \-\>\] && go version
   else
     echo "#   <!>-----GO_HOME-------------<!>" $GO_HM
   fi
-  if [ "$IS_PATH_LOG_ENABLED" == "Y" ]; then
+  if [ "$IS_PATH_LOG_ENABLED" == "$FLAG_STATUS" ]; then
     echo "#--<!>---------------------------------------------------------------------------------x--PATH--E-x-<!>"
     echo $PATH
     echo "#--<!>---------------------------------------------------------------------------------x--PATH--R-x-<!>"
   fi
   # echo "#---<!>--Inspect--<<END>>---#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#~#"
 
+fi
+
+# -<!>-bash-completion--BEGIN--
+
+if type brew &>/dev/null
+then
+ if [[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+ then
+   source "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
+ else
+   for COMPLETION in "${BREW_PREFIX}/etc/bash_completion.d/"*
+   do
+     [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+   done
+ fi
 fi
 
 # -<!>-bash-completion--BEGIN--
@@ -294,7 +331,7 @@ PS1="$TITLEBAR\n\[${COLOR_GREEN}\]<!> \d \t \[${COLOR_GREEN}\]<!> \[${COLOR_LIGH
 # -<!>-Colorify & Have Git Branch In Prompt-BASH-<!>---END---
 
 ##
-# Your previous /Users/afuvxv2/.bash_profile file was backed up as /Users/afuvxv2/.bash_profile.macports-saved_2018-09-24_at_17:09:22
+# Your previous ~/.bash_profile file was backed up as ~/.bash_profile.macports-saved_2018-09-24_at_17:09:22
 ##
 
 # MacPorts Installer addition on 2018-09-24_at_17:09:22: adding an appropriate PATH variable for use with MacPorts.
@@ -337,7 +374,9 @@ nvm use --lts #v11.10.1
 #echo "# <!> Illustrations -------------------x----------------------"
 #echo "#--<!>--------------------------------------------------------------------------------------------x-<!>"
 #Commented by ViVa on 20210205 as the aliases/shortcuts has been moved to ~/.bash_aliases-----<-END->----------
-echo "# <!>--------------------------------------------< BASH_PROFILE [USING VERSIONS]>------------------------------------------------x--------<!> #" && pause 'Press [return] key to begin...' && clear
+if [[ "$FLAG_STATUS" == "yba" || "$FLAG_STATUS" == "ybpv" || "$FLAG_STATUS" == "ybpp" ]]; then
+  echo "# <!>--------------------------------------------< BASH_PROFILE [USING VERSIONS]>------------------------------------------------x--------<!> #" && pause 'Press [return] key to begin...' && clear
+fi
 
 echo "# <!>--------------------------------------------< USING BASH PROFILE >------------------------------------------------x--------<!> #"
 . "$HOME/.cargo/env"
